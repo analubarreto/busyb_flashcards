@@ -1,6 +1,6 @@
 {
-  "name": "svelte pwa starter",
-  "short_name": "svelte pwa starter",
+  "name": "BusyBee Flash Cards",
+  "short_name": "Bee Flashes",
   "icons": [
     {
       "src": "/images/icons/icon-128x128.png",

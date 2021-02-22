@@ -9,7 +9,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -30,6 +30,7 @@
     "tailwindcss": "^2.0.3"
   },
   "dependencies": {
+    "aws-amplify": "^3.3.20",
     "sirv-cli": "^1.0.0",
     "svelte-routing": "^1.5.0"
   },

@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-busybflashcards-dev-152423-authRole",
+      "UnauthRoleArn": "arn:aws:iam::500745836313:role/amplify-busybflashcards-dev-152423-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::500745836313:role/amplify-busybflashcards-dev-152423-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-busybflashcards-dev-152423-deployment",
+      "UnauthRoleName": "amplify-busybflashcards-dev-152423-unauthRole",
+      "StackName": "amplify-busybflashcards-dev-152423",
+      "StackId": "arn:aws:cloudformation:us-east-1:500745836313:stack/amplify-busybflashcards-dev-152423/34158d40-753b-11eb-ab02-1214c28caebf",
+      "AmplifyAppId": "d3db6wyvgnlycl"
+    },
+    "categories": {
+      "function": {
+        "busybflashcards37791f2aCustomMessage": {
+          "REDIRECTURL": "/select-language",
+          "EMAILSUBJECT": "Confirm your email",
+          "EMAILMESSAGE": "Please confirm your email address by clicking the link below",
+          "deploymentBucketName": "amplify-busybflashcards-dev-152423-deployment",
+          "s3Key": "amplify-builds/busybflashcards37791f2aCustomMessage-746d4431453875554b36-build.zip"
+        }
+      },
+      "auth": {
+        "busybflashcards37791f2a": {}
+      }
+    }
+  }
+}

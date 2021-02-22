@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "busybflashcards37791f2a",
+  "functionName": "busybflashcards37791f2aCustomMessage",
+  "resourceName": "busybflashcards37791f2aCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/snapshot/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "busybflashcards37791f2aCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "/select-language",
+  "EMAILSUBJECT": "Confirm your email",
+  "EMAILMESSAGE": "Please confirm your email address by clicking the link below",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

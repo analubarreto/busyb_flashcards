@@ -36,7 +36,7 @@
 				id="input"
 				bind:value={email}
 				placeholder="email@email.com"
-				class="block border-none bg-gray-light shadow rounded-md mb-5 h-10 w-full pl-9"
+				class="block border-gray rounded-md bg-gray-light shadow mb-5 h-10 w-full pl-9"
 			/>
 		</Input>
 		<Input icon="lock" label="Password">
@@ -45,7 +45,7 @@
 				id="input"
 				bind:value={password}
 				placeholder="******"
-				class="block border-none bg-gray-light shadow rounded-md mb-5 h-10 w-full pl-9"
+				class="block border-gray rounded-md bg-gray-light shadow mb-5 h-10 w-full pl-9"
 			/>
 		</Input>
 	</div>
