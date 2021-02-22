@@ -3,21 +3,22 @@
 	import { Router, Route } from 'svelte-routing';
 	// Pages
 	import Home from './pages/Home.svelte';
-	import About from './pages/About.svelte';
-	import Blog from './pages/blog/BlogIndex.svelte';
-	import BlogPost from './pages/blog/BlogPost.svelte';
+	import Login from './pages/Login.svelte';
+	import Register from './pages/Register.svelte';
+	import SelectLanguage from './pages/SelectLanguage.svelte';
 	// Components
-	import Navbar from './components/Navbar.svelte';
+	import Topbar from './components/app-wide/Tobar.svelte';
+	import Footer from './components/app-wide/Footer.svelte';
 
 	export let url = '';
 </script>
 
 <Router {url}>
-	<Navbar />
+	<Topbar />
 	<div>
-		<Route path="blog/:id" component={BlogPost} />
-		<Route path="blog" component={Blog} />
-		<Route path="about" component={About} />
+		<Route path="login" component={Login} />
+		<Route path="register" component={Register} />
+		<Route path="select-language" component={SelectLanguage} />
 		<Route path="/"><Home /></Route>
 	</div>
 </Router>
@@ -27,3 +28,4 @@
 	@tailwind components;
 	@tailwind utilities;
 </style>
+<Footer />
