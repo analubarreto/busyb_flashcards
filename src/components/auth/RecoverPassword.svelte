@@ -2,7 +2,7 @@
 	// Imports - Componets
 	import Input from '../main/inputs/Input.svelte';
 	import ActionButton from '../main/buttons/ActionButton.svelte';
-	import { loginStore as showRecover } from './auth-store';
+	import { showRecover } from './auth-store';
 	// Props
 	export let toggleRecover;
 	// Local variables

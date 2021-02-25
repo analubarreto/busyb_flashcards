@@ -4,7 +4,6 @@
 	// Pages
 	import Home from './pages/Home.svelte';
 	import Login from './pages/Login.svelte';
-	import Register from './pages/Register.svelte';
 	import SelectLanguage from './pages/SelectLanguage.svelte';
 	import Words from './pages/words/Words.svelte';
 	import SingleWord from './pages/words/SingleWord.svelte';
@@ -20,8 +19,7 @@
 <Router {url}>
 	<Topbar />
 	<div>
-		<Route path="login" component={Login} />
-		<Route path="register" component={Register} />
+		<Route path="auth" component={Login} />
 		<Route path="select-language" component={SelectLanguage} />
 		<Route path="words" component={Words} />
 		<Route path="words/:id" component={SingleWord} />
@@ -30,10 +28,10 @@
 		<Route path="/"><Home /></Route>
 	</div>
 </Router>
+<Footer />
 
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
 </style>
-<Footer />

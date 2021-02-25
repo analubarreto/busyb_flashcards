@@ -27,6 +27,6 @@
 		target="_blank">https://wa.me/5561991828555</a
 	>
 	<div class="self-center mt-10">
-		<Button buttonUrl="/login">ENTER</Button>
+		<Button buttonUrl="/auth">ENTER</Button>
 	</div>
 </main>
