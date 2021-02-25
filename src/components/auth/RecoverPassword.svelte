@@ -2,14 +2,12 @@
 	// Imports - Componets
 	import Input from '../main/inputs/Input.svelte';
 	import ActionButton from '../main/buttons/ActionButton.svelte';
-	import { showRecover } from './auth-store';
-	// Props
-	export let toggleRecover;
+	import { authStore } from './auth-store';
 	// Local variables
 	let email = '';
 </script>
 
-{#if $showRecover}
+{#if $authStore.showRecover}
 	<div class="flex flex-col h-screen p-5 md:p-20 justify-evenly absolute z-10 lg:pl-96">
 		<p class="font-body text-orange text-2xl text-center">
 			Did you forget your password? Don't worry! Confirm your e-mail bellow and we will help
@@ -25,7 +23,9 @@
 			/>
 		</Input>
 		<div class="self-end">
-			<ActionButton action={toggleRecover}>SEND</ActionButton>
+			<ActionButton action={() => authStore.toggleItem('showRecover', false)}
+				>SEND</ActionButton
+			>
 		</div>
 	</div>
 	<div class="bg-black h-screen w-screen opacity-95" />

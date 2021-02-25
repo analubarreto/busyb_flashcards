@@ -4,31 +4,21 @@
 	import UrlButton from '../main/buttons/UrlButton.svelte';
 	import RecoverPassword from './RecoverPassword.svelte';
 	// Imports - Store
-	import { showRecover } from '../auth/auth-store';
+	import { authStore } from '../auth/auth-store';
 	// Local variables
 	let email = '';
 	let password = '';
-	let isUser = true;
-	// Functions
-	function toggleRecover() {
-		if (!$showRecover) {
-			showRecover.set(true);
-		} else {
-			showRecover.set(false);
-		}
-	}
+	let isUser = $authStore.isUser;
 
-	function toggleUser() {
-		return (isUser = !isUser);
-	}
+	$: console.log($authStore.showRecover);
 </script>
 
 <section class="absolute z-20">
-	<RecoverPassword {toggleRecover} />
+	<RecoverPassword />
 </section>
 <main class="flex flex-col md:items-center h-screen px-5 justify-evenly z-10">
 	<h1 class="font-body text-gray text-2xl md:text-3xl font-regular text-center">
-		{#if isUser}
+		{#if $authStore.isUser}
 			Welcome! Please Login to access the app.
 		{:else}
 			Please fill the information
@@ -55,28 +45,34 @@
 		</Input>
 	</div>
 	<div class="flex md:flex-col items-center justify-evenly md:h-1/5 w-screen">
-		<button
-			class="font-body text-gray mr-auto md:mr-0 text-sm visited:text-gray hover:text-purple-light border-none"
-			on:click={toggleUser}
-		>
-			{#if isUser}
+		{#if $authStore.isUser}
+			<button
+				class="font-body text-gray mr-auto md:mr-0 text-sm visited:text-gray hover:text-purple-light border-none"
+				on:click={() => authStore.toggleItem('isUser', false)}
+			>
 				Don't have an account?
-			{:else}
+			</button>
+		{:else}
+			<button
+				class="font-body text-gray mr-auto md:mr-0 text-sm visited:text-gray hover:text-purple-light border-none"
+				on:click={() => authStore.toggleItem('isUser', true)}
+			>
 				Already have an account?
-			{/if}
-		</button>
+			</button>
+		{/if}
 		<div class="mr-auto md:mr-0">
 			<UrlButton buttonUrl="/select-language">
-				{#if isUser}
+				{#if $authStore.isUser}
 					LOGIN
 				{:else}
 					REGISTER
 				{/if}
 			</UrlButton>
-			{#if isUser}
+			{#if $authStore.isUser}
 				<button
 					class="font-body mt-2 md:mt-5 text-gray text-sm visited:text-gray hover:text-purple-light border-none"
-					on:click={toggleRecover}>Forgot your password?</button
+					on:click={() => authStore.toggleItem('showRecover', true)}
+					>Forgot your password?</button
 				>
 			{/if}
 		</div>
