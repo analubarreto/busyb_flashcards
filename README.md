@@ -16,11 +16,11 @@ Please contact me if you want to help:
 https://wa.me/5561991828555
 
 This app is built using:
-* [Routify](https://routify.dev/)
 * [Svelte](https://svelte.dev/)
+* [Svelte-Routing](https://www.npmjs.com/package/svelte-routing/)
 * [TailwindCSS](https://tailwindcss.com/)
-* [Google Dictionary API](https://dictionaryapi.dev/)
-* [AWS Amplify for authentication](https://docs.amplify.aws/lib/auth/getting-started/q/platform/js)
+* [Strapi Headless CMS](https://strapi.io/)
+* [PWA](https://web.dev/progressive-web-apps/?gclid=CjwKCAiA1eKBBhBZEiwAX3gql6kdutcss0adNHgleL6kZLmkglh2TaVh1RyrBa6SVU4rOmQ4d6fWdhoCVAUQAvD_BwE)
 
 ## Prototype
 The MVP's prototype was made in figma, you can see using this link:
